@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Variables
-source config.sh
+source ./config.sh
 
-pushd ${DOMAIN_PATH}
+pushd ${DOMAIN_PATH} > /dev/null
 
 # ######### Web Site Backup ######### 
 for i in ${DOMAINS_DOMAINS[@]}; do
@@ -14,4 +14,5 @@ done
 # Deleting backups older than 30 days
 # echo "Removing old files"
 /usr/bin/find *.zip -mtime +30 -exec rm {} \;
-popd
+
+popd > /dev/null

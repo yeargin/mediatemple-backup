@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Variables
-source config.sh
+source ./config.sh
 
-pushd ${BACKUP_PATH}
+pushd ${BACKUP_PATH} > /dev/null
 
 # ######### Database Backup ######### 
 for i in ${DB_DATABASES[@]}; do
@@ -14,4 +14,4 @@ done
 # Deleting backups older than seven days
 /usr/bin/find *.gz -mtime +7 -exec rm {} \;
 
-popd
+popd > /dev/null
