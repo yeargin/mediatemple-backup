@@ -3,11 +3,11 @@
 # Variables
 source ./config.sh
 
-pushd ${DOMAIN_PATH} > /dev/null
+pushd ${DOMAINS_PATH} > /dev/null
 
 # ######### Web Site Backup ######### 
 for i in ${DOMAINS_DOMAINS[@]}; do
-  /usr/bin/zip -rq ${BACKUP_PATH}/$i_`date "+%Y-%m-%d"`.zip $i/
+  /usr/bin/zip -rq ${BACKUP_PATH}/$i_`date "+%Y-%m-%d"`.zip ./$i/
 done
 
 # ######### Clean-up Old Junk ######### 
