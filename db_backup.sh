@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Variables
-./config.sh
+source config.sh
 
 pushd ${BACKUP_PATH}
 
