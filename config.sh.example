@@ -1,0 +1,21 @@
+## Backups
+BACKUP_PATH=/home/00000/data/backups
+
+## File System
+DOMAINS_PATH=/home/00000/domains
+DOMAINS_DOMAINS=(
+  'example.com'
+  'example.net'
+  'example.org'
+)
+
+## Databases
+DB_HOSTNAME=internal-db.s00000.gridserver.com
+DB_USERNAME=db00000
+DB_PASSWORD=5up3r53cur3
+# Ommit the db0000_ prefixes
+DB_DATABASES=(
+  'database_1'
+  'database_2'
+  'database_3'
+);
