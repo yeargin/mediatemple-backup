@@ -14,6 +14,6 @@ done
 # ######### Clean-up Old Junk ######### 
 # Deleting backups older than 30 days
 # echo "Removing old files"
-/usr/bin/find *.zip -mtime +30 -exec rm {} \;
+/usr/bin/find ${BACKUP_PATH}/*.zip -mtime +30 -exec rm {} \;
 
 popd > /dev/null

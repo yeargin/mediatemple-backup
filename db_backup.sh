@@ -13,6 +13,6 @@ done
 
 # ######### Clean-up Old Junk ######### 
 # Deleting backups older than seven days
-/usr/bin/find *.gz -mtime +7 -exec rm {} \;
+/usr/bin/find ${BACKUP_PATH}/*.gz -mtime +7 -exec rm {} \;
 
 popd > /dev/null
