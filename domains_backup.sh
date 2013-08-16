@@ -1,13 +1,14 @@
 #!/bin/sh
 
 # Variables
-source ./config.sh
+BASEDIR=$(dirname $0)
+source ${BASEDIR}/config.sh
 
 pushd ${DOMAINS_PATH} > /dev/null
 
 # ######### Web Site Backup ######### 
 for i in ${DOMAINS_DOMAINS[@]}; do
-  /usr/bin/zip -rq ${BACKUP_PATH}/$i_`date "+%Y-%m-%d"`.zip ./$i/
+  /usr/bin/zip -rq ${BACKUP_PATH}/$i\_`date "+%Y-%m-%d"`.zip ./$i/
 done
 
 # ######### Clean-up Old Junk ######### 
