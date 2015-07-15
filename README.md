@@ -7,7 +7,7 @@ A few sites that I work with are on MediaTemple, and I want to make sure that I 
 
 ```
 cd ~/data/
-git clone https://github.com/stephenyeargin/mediatemple-backups.git
+git clone https://github.com/yeargin/mediatemple-backups.git
 ```
 
 2. Create a 'backups' or similiarly named folder in the `~/data` folder (e.g. `~/data/backups`)
